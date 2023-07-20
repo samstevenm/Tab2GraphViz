@@ -1,2 +1,2 @@
 # Tab2GraphViz
-Collection of cripts that convert tabular data into GraphViz
+Collection of scripts that convert tabular data into GraphViz
