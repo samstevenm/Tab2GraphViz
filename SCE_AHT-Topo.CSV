@@ -1,0 +1,8 @@
+Domotz Name,Location,Zone,Model,MAC,IP Address,Uplink,Label,,,,,,,,,,
+SW01,Main House MDF,Rack 6 - S# 1,Summit X460-48P,02:04:96:8F:92:1F,10.10.10.1,Internet/Router?,Port ? ->,,,,,,,,,,
+SW02,Main House MDF,Rack 6 - S# 2,Summit X460-48P,02:04:96:8F:8F:69,,SW01,Stack Port 1 -> Stack Port 1,,,,,,,,,,
+SW03,Main House MDF,Rack 6 - S# 3,Summit X460-48P,02:04:96:8F:91:7F,,SW02,Stack Port 1 -> Stack Port 1,,,,,,,,,,
+SW04,Main House MDF,Rack 6 - S# 4,Summit X460-48P,02:04:96:8F:C9:6D,,SW03,Stack Port 1 -> Stack Port 1,,,,,,,,,,
+SW05,Main House MDF,Rack 6 - S# 5 ,Summit X460-48P,02:04:69:99:BD:55,,SW04,Stack Port 1 -> Stack Port 1,,,,,,,,,,
+SW06,Security Room ,Swingate - S# 1,Summit X440-48P,02:04:96:97:B7:07,,SW01,Fiber -> ??,,,,,,,,,,
+SW07,Security Room ,Swingate - S# 2,Summit X440-24P,02:04:96:82:38:08,,SW06,Stack Port 2 -> Stack Port 2,,,,,,,,,,

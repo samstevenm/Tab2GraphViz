@@ -1,0 +1,65 @@
+digraph NetworkDiagram {
+    node [shape=box];
+
+    subgraph cluster_Main_House_MDF {
+        label = "Main House MDF";
+        style = "filled,rounded";
+        fillcolor = "#a8eeef";
+        subgraph cluster_Main_House_MDF_Rack_6_-_S#_1 {
+            label = "Rack 6 - S# 1";
+            style = "filled,rounded";
+            fillcolor = "#a8efe1";
+            "SW01" [label="SW01\nSummit X460-48P\n02:04:96:8F:92:1F\n10.10.10.1"];
+        }
+        subgraph cluster_Main_House_MDF_Rack_6_-_S#_2 {
+            label = "Rack 6 - S# 2";
+            style = "filled,rounded";
+            fillcolor = "#e9efa8";
+            "SW02" [label="SW02\nSummit X460-48P\n02:04:96:8F:8F:69\nnan"];
+        }
+        subgraph cluster_Main_House_MDF_Rack_6_-_S#_3 {
+            label = "Rack 6 - S# 3";
+            style = "filled,rounded";
+            fillcolor = "#efa8e6";
+            "SW03" [label="SW03\nSummit X460-48P\n02:04:96:8F:91:7F\nnan"];
+        }
+        subgraph cluster_Main_House_MDF_Rack_6_-_S#_4 {
+            label = "Rack 6 - S# 4";
+            style = "filled,rounded";
+            fillcolor = "#c9efa8";
+            "SW04" [label="SW04\nSummit X460-48P\n02:04:96:8F:C9:6D\nnan"];
+        }
+        subgraph cluster_Main_House_MDF_Rack_6_-_S#_5_ {
+            label = "Rack 6 - S# 5 ";
+            style = "filled,rounded";
+            fillcolor = "#dea8ef";
+            "SW05" [label="SW05\nSummit X460-48P\n02:04:69:99:BD:55\nnan"];
+        }
+    }
+
+    subgraph cluster_Security_Room_ {
+        label = "Security Room ";
+        style = "filled,rounded";
+        fillcolor = "#b4a8ef";
+        subgraph cluster_Security_Room__Swingate_-_S#_1 {
+            label = "Swingate - S# 1";
+            style = "filled,rounded";
+            fillcolor = "#efa8c6";
+            "SW06" [label="SW06\nSummit X440-48P\n02:04:96:97:B7:07\nnan"];
+        }
+        subgraph cluster_Security_Room__Swingate_-_S#_2 {
+            label = "Swingate - S# 2";
+            style = "filled,rounded";
+            fillcolor = "#e3a8ef";
+            "SW07" [label="SW07\nSummit X440-24P\n02:04:96:82:38:08\nnan"];
+        }
+    }
+
+    "SW01" -> "Internet/Router?" [label="Port ? ->"];
+    "SW02" -> "SW01" [label="Stack Port 1 -> Stack Port 1"];
+    "SW03" -> "SW02" [label="Stack Port 1 -> Stack Port 1"];
+    "SW04" -> "SW03" [label="Stack Port 1 -> Stack Port 1"];
+    "SW05" -> "SW04" [label="Stack Port 1 -> Stack Port 1"];
+    "SW06" -> "SW01" [label="Fiber -> ??"];
+    "SW07" -> "SW06" [label="Stack Port 2 -> Stack Port 2"];
+}

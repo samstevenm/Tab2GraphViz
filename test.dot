@@ -1,0 +1,108 @@
+digraph NetworkDiagram {
+    node [shape=box];
+
+    subgraph cluster_Rack_Room {
+        label = "Rack Room";
+        style = "filled,rounded";
+        fillcolor = "#a8e8ef";
+        subgraph cluster_Rack_Room_Network_Rack {
+            label = "Network Rack";
+            style = "filled,rounded";
+            fillcolor = "#c8a8ef";
+"GanahlSwitch" [label="GanahlSwitch
+TBD
+DE:AD:FA:CE:BB:00
+xxx.xxx.xxx.xxx"];
+        }
+        subgraph cluster_Rack_Room_AHTENC {
+            label = "AHTENC";
+            style = "filled,rounded";
+            fillcolor = "#e3efa8";
+"CrestronSwitch" [label="CrestronSwitch
+CEN-SW-POE-5
+NONE
+xxx.xxx.xxx.xxx"];
+"AP4-R" [label="AP4-R
+AP4-R
+C442682A94ED
+xxx.xxx.xxx.xxx"];
+"RMC4" [label="RMC4
+RMC4
+C442681C057D
+xxx.xxx.xxx.xxx"];
+"WattBox" [label="WattBox
+WB-250-IPW-2
+143FC3037CBB
+xxx.xxx.xxx.xxx"];
+"B-12" [label="B-12
+B-12
+F023B9E37C2B
+xxx.xxx.xxx.xxx"];
+        }
+    }
+
+    subgraph cluster_TBD_Location {
+        label = "TBD Location";
+        style = "filled,rounded";
+        fillcolor = "#b2a8ef";
+        subgraph cluster_TBD_Location_TBD_Zone {
+            label = "TBD Zone";
+            style = "filled,rounded";
+            fillcolor = "#a8efab";
+"Hub 1" [label="Hub 1
+HJS-2
+DE:AD:FA:CE:BB:01
+xxx.xxx.xxx.xxx"];
+"Hub 2" [label="Hub 2
+HJS-2
+DE:AD:FA:CE:BB:02
+xxx.xxx.xxx.xxx"];
+"Hub 3" [label="Hub 3
+HJS-2
+DE:AD:FA:CE:BB:03
+xxx.xxx.xxx.xxx"];
+"Hub 4" [label="Hub 4
+HJS-2
+DE:AD:FA:CE:BB:04
+xxx.xxx.xxx.xxx"];
+"Hub 5" [label="Hub 5
+HJS-2
+DE:AD:FA:CE:BB:05
+xxx.xxx.xxx.xxx"];
+"Hub 6" [label="Hub 6
+HJS-2
+DE:AD:FA:CE:BB:06
+xxx.xxx.xxx.xxx"];
+        }
+    }
+
+    subgraph cluster_Register {
+        label = "Register";
+        style = "filled,rounded";
+        fillcolor = "#efa8a9";
+        subgraph cluster_Register_Wall {
+            label = "Wall";
+            style = "filled,rounded";
+            fillcolor = "#a8e4ef";
+"TouchScreen" [label="TouchScreen
+TSW-1070R-W
+C442681A6AB5
+xxx.xxx.xxx.xxx"];
+        }
+    }
+
+    "GanahlSwitch" -> "GanahlRouter" [label="Port XX -> Port XY"];
+    "CrestronSwitch" -> "GanahlSwitch" [label="Port 1 -> PORT XZ"];
+    "AP4-R" -> "CrestronSwitch" [label="1 -> Port 2"];
+    "RMC4" -> "CrestronSwitch" [label="1 -> Port 3"];
+    "WattBox" -> "CrestronSwitch" [label="1 -> Port 4"];
+    "B-12" -> "CrestronSwitch" [label="1 -> Port 5"];
+    "Hub 1" -> "GanahlSwitch" [label="1 -> Port H1"];
+    "Hub 2" -> "GanahlSwitch" [label="1 -> Port H2"];
+    "Hub 3" -> "GanahlSwitch" [label="1 -> Port H3"];
+    "Hub 4" -> "GanahlSwitch" [label="1 -> Port H4"];
+    "Hub 5" -> "GanahlSwitch" [label="1 -> Port H5"];
+    "Hub 6" -> "GanahlSwitch" [label="1 -> Port H6"];
+    "TouchScreen" -> "GanahlSwitch" [label="1 -> Port H7"];
+}
+

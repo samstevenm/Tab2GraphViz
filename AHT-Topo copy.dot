@@ -1,0 +1,170 @@
+digraph NetworkDiagram {
+    node [shape=box];
+
+    subgraph cluster_Rack_Room {
+        label = "Rack Room";
+        style = "filled,rounded";
+        fillcolor = "#efdca8";
+        subgraph cluster_Rack_Room_Network_Rack_2 {
+            label = "Network Rack 2";
+            style = "filled,rounded";
+            fillcolor = "#cea8ef";
+            "Ganahl SW167F" [label="Ganahl SW167F\nFS-248E-FPOE\nAC712E00D2F0\nIP TBD"];
+        }
+        subgraph cluster_Rack_Room_Network_Rack_3 {
+            label = "Network Rack 3";
+            style = "filled,rounded";
+            fillcolor = "#efdca8";
+            "Ganahl SW167H" [label="Ganahl SW167H\nFS-248E-FPOE\nAC712E00CA4A\nIP TBD"];
+        }
+        subgraph cluster_Rack_Room_AHT_Enclsoure {
+            label = "AHT Enclsoure";
+            style = "filled,rounded";
+            fillcolor = "#dcefa8";
+            "CrestronSwitch" [label="CrestronSwitch\nCEN-SW-POE-5\nNONE\nNO IP"];
+            "WattBox" [label="WattBox\nWB-250-IPW-2\n143FC3037CBB\n10.2.32.50"];
+            "Sub Processor" [label="Sub Processor\nRMC4\nC442681C057D\n10.2.32.52"];
+            "Domotz" [label="Domotz\nB-12\nF023B9E37C2B\n10.2.32.51"];
+            "Main Processor" [label="Main Processor\nAP4-R\nC442682A94ED\n10.2.32.53"];
+        }
+    }
+
+    subgraph cluster_Bldg_1 {
+        label = "Bldg 1";
+        style = "filled,rounded";
+        fillcolor = "#efeea8";
+        subgraph cluster_Bldg_1_Retail_Area_SE {
+            label = "Retail Area SE";
+            style = "filled,rounded";
+            fillcolor = "#baa8ef";
+            "Vive 1 SE" [label="Vive 1 SE\nHJS-2\n685E1CE0A5C6\n10.2.32.107"];
+        }
+        subgraph cluster_Bldg_1_Retail_Area_SW {
+            label = "Retail Area SW";
+            style = "filled,rounded";
+            fillcolor = "#a8efd9";
+            "Vive 2 SW" [label="Vive 2 SW\nHJS-2\nMAC TBD\nIP TBD"];
+        }
+        subgraph cluster_Bldg_1_165_Lounge_Mezz {
+            label = "165 Lounge Mezz";
+            style = "filled,rounded";
+            fillcolor = "#efa8e8";
+            "Vive 3 NW" [label="Vive 3 NW\nHJS-2\n38AB411304C2\n10.2.32.106"];
+        }
+        subgraph cluster_Bldg_1_Retail_Area_NE {
+            label = "Retail Area NE";
+            style = "filled,rounded";
+            fillcolor = "#efa8b5";
+            "Vive 4 NE" [label="Vive 4 NE\nHJS-2\n38AB411304FB\n10.2.32.108"];
+        }
+    }
+
+    subgraph cluster_Bldg_2 {
+        label = "Bldg 2";
+        style = "filled,rounded";
+        fillcolor = "#efa8c1";
+        subgraph cluster_Bldg_2_Quad_2_Center {
+            label = "Quad 2 Center";
+            style = "filled,rounded";
+            fillcolor = "#e4a8ef";
+            "Vive 5 Warehouse" [label="Vive 5 Warehouse\nHJS-2\nA406E91A17E7\nIP TBD"];
+        }
+        subgraph cluster_Bldg_2_Quad_1_SW {
+            label = "Quad 1 SW";
+            style = "filled,rounded";
+            fillcolor = "#efa8d9";
+            "Vive 6 Warehouse" [label="Vive 6 Warehouse\nHJS-2\nA406E919C4AA\n10.2.32.116"];
+        }
+        subgraph cluster_Bldg_2_Quad_3_SE {
+            label = "Quad 3 SE";
+            style = "filled,rounded";
+            fillcolor = "#b5a8ef";
+            "Hub 7" [label="Hub 7\nHJS-3\nMAC TBD\nIP TBD"];
+        }
+    }
+
+    subgraph cluster_Bldg_3 {
+        label = "Bldg 3";
+        style = "filled,rounded";
+        fillcolor = "#a8efd9";
+        subgraph cluster_Bldg_3_Warehouse {
+            label = "Warehouse";
+            style = "filled,rounded";
+            fillcolor = "#efa8c1";
+            "Hub 8" [label="Hub 8\nHJS-4\nMAC TBD\nIP TBD"];
+        }
+        subgraph cluster_Bldg_3_Front_Office {
+            label = "Front Office";
+            style = "filled,rounded";
+            fillcolor = "#efa8bf";
+            "Hub 9" [label="Hub 9\nHJS-5\nMAC TBD\nIP TBD"];
+        }
+    }
+
+    subgraph cluster_Register_Counter {
+        label = "Register Counter";
+        style = "filled,rounded";
+        fillcolor = "#efeda8";
+        subgraph cluster_Register_Counter_Wall {
+            label = "Wall";
+            style = "filled,rounded";
+            fillcolor = "#a8d7ef";
+            "TouchScreen" [label="TouchScreen\nTSW-1070R-W\nC442681A6AB5\n10.2.32.125"];
+        }
+    }
+
+    subgraph cluster_Terabithia {
+        label = "Terabithia";
+        style = "filled,rounded";
+        fillcolor = "#efa8d5";
+        subgraph cluster_Terabithia_Bathroom {
+            label = "Bathroom";
+            style = "filled,rounded";
+            fillcolor = "#c8efa8";
+            "Ganahl SW201A" [label="Ganahl SW201A\nFS-248E-FPOE\ndeadfacebb\nxxx.xxx.x.x"];
+        }
+    }
+
+    subgraph cluster_Terabithia2 {
+        label = "Terabithia2";
+        style = "filled,rounded";
+        fillcolor = "#e8efa8";
+        subgraph cluster_Terabithia2_Bathroom_2 {
+            label = "Bathroom 2";
+            style = "filled,rounded";
+            fillcolor = "#c9efa8";
+            "Ganahl SW301C" [label="Ganahl SW301C\nFS-248E-FPOE\ndeadfaceba\ntbd"];
+        }
+    }
+
+    subgraph cluster_Terabithia3 {
+        label = "Terabithia3";
+        style = "filled,rounded";
+        fillcolor = "#ada8ef";
+        subgraph cluster_Terabithia3_Bathroom_2 {
+            label = "Bathroom 2";
+            style = "filled,rounded";
+            fillcolor = "#a8efd5";
+            "Ganahl SW167E" [label="Ganahl SW167E\nFS-248E-FPOE\ndeadfacebc\ntbd"];
+            "Ganahl SW167G" [label="Ganahl SW167G\nFS-248E-FPOE\ndeadfacebc\ntbd"];
+        }
+    }
+
+    "Ganahl SW167F" -> "Ganahl SW167E" [label="Port 51 -> Port 52"];
+    "Ganahl SW167H" -> "Ganahl SW167G" [label="Port 51 -> Port 52"];
+    "CrestronSwitch" -> "Ganahl SW167H" [label="Port 5 -> Port 14"];
+    "WattBox" -> "CrestronSwitch" [label="1 -> Port 1"];
+    "Sub Processor" -> "CrestronSwitch" [label="1 -> Port 2"];
+    "Domotz" -> "CrestronSwitch" [label="1 -> Port 3"];
+    "Main Processor" -> "CrestronSwitch" [label="1 -> Port 4"];
+    "Vive 1 SE" -> "Ganahl SW167F" [label="1 -> Port 6"];
+    "Vive 2 SW" -> "Ganahl SW167F" [label="1 -> Port 8"];
+    "Vive 3 NW" -> "Ganahl SW167F" [label="1 -> Port 2"];
+    "Vive 4 NE" -> "Ganahl SW167F" [label="1 -> Port 4"];
+    "Vive 5 Warehouse" -> "Ganahl SW201A" [label="1 -> Port ??"];
+    "Vive 6 Warehouse" -> "Ganahl SW201A" [label="1 -> Port 21"];
+    "Hub 7" -> "Ganahl SW201A" [label="1 -> Port ??"];
+    "Hub 8" -> "Ganahl SW301C" [label="1 -> Port ??"];
+    "Hub 9" -> "Ganahl SW301C" [label="1 -> Port ??"];
+    "TouchScreen" -> "Ganahl SW167F" [label="1 -> Port 25"];
+}

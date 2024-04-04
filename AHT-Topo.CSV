@@ -1,0 +1,18 @@
+Domotz Name,Location,Zone,Model,MAC,IP Address,Uplink,Label
+Ganahl SW167F,Rack Room,Network Rack 2,FS-248E-FPOE,AC712E00D2F0,IP TBD,Ganahl SW167E,Port 51 -> Port 52
+Ganahl SW167H,Rack Room,Network Rack 3,FS-248E-FPOE,AC712E00CA4A,IP TBD,Ganahl SW167G,Port 51 -> Port 52
+CrestronSwitch,Rack Room,AHT Enclsoure,CEN-SW-POE-5,NONE,NO IP,Ganahl SW167H,Port 5 -> Port 14
+WattBox,Rack Room,AHT Enclsoure,WB-250-IPW-2,143FC3037CBB,10.2.32.50,CrestronSwitch,1 -> Port 1
+Sub Processor,Rack Room,AHT Enclsoure,RMC4,C442681C057D,10.2.32.52,CrestronSwitch,1 -> Port 2
+Domotz,Rack Room,AHT Enclsoure,B-12,F023B9E37C2B,10.2.32.51,CrestronSwitch,1 -> Port 3
+Main Processor,Rack Room,AHT Enclsoure,AP4-R,C442682A94ED,10.2.32.53,CrestronSwitch,1 -> Port 4
+Vive 1 SE,Bldg 1,Retail Area SE,HJS-2,685E1CE0A5C6,10.2.32.107,Ganahl SW167F,1 -> Port 6
+Vive 2 SW,Bldg 1,Retail Area SW,HJS-2,MAC TBD,IP TBD,Ganahl SW167F,1 -> Port 8
+Vive 3 NW,Bldg 1,165 Lounge Mezz,HJS-2,38AB411304C2,10.2.32.106,Ganahl SW167F,1 -> Port 2
+Vive 4 NE,Bldg 1,Retail Area NE,HJS-2,38AB411304FB,10.2.32.108,Ganahl SW167F,1 -> Port 4
+Vive 5 Warehouse,Bldg 2,Quad 2 Center,HJS-2,A406E91A17E7,IP TBD,Ganahl SW201A,1 -> Port ??
+Vive 6 Warehouse,Bldg 2,Quad 1 SW,HJS-2,A406E919C4AA,10.2.32.116,Ganahl SW201A,1 -> Port 21
+Hub 7,Bldg 2,Quad 3 SE,HJS-3,MAC TBD,IP TBD,Ganahl SW201A,1 -> Port ??
+Hub 8,Bldg 3,Warehouse,HJS-4,MAC TBD,IP TBD,Ganahl SW301C,1 -> Port ??
+Hub 9,Bldg 3,Front Office,HJS-5,MAC TBD,IP TBD,Ganahl SW301C,1 -> Port ??
+TouchScreen,Register Counter,Wall,TSW-1070R-W,C442681A6AB5,10.2.32.125,Ganahl SW167F,1 -> Port 25

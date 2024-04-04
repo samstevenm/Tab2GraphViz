@@ -1,0 +1,38 @@
+digraph NetworkDiagram {
+    node [shape=box];
+
+"Ganahl SW167F" [label="Ganahl SW167F\nFS-248E-FPOE\nAC712E00D2F0\nIP TBD"];
+"Ganahl SW167H" [label="Ganahl SW167H\nFS-248E-FPOE\nAC712E00CA4A\nIP TBD"];
+"CrestronSwitch" [label="CrestronSwitch\nCEN-SW-POE-5\nNONE\nNO IP"];
+"WattBox" [label="WattBox\nWB-250-IPW-2\n143FC3037CBB\n10.2.32.50"];
+"Sub Processor" [label="Sub Processor\nRMC4\nC442681C057D\n10.2.32.52"];
+"Domotz" [label="Domotz\nB-12\nF023B9E37C2B\n10.2.32.51"];
+"Main Processor" [label="Main Processor\nAP4-R\nC442682A94ED\n10.2.32.53"];
+"Vive 1 SE" [label="Vive 1 SE\nHJS-2\n685E1CE0A5C6\n10.2.32.107"];
+"Vive 2 SW" [label="Vive 2 SW\nHJS-2\nMAC TBD\nIP TBD"];
+"Vive 3 NW" [label="Vive 3 NW\nHJS-2\n38AB411304C2\n10.2.32.106"];
+"Vive 4 NE" [label="Vive 4 NE\nHJS-2\n38AB411304FB\n10.2.32.108"];
+"Vive 5 Warehouse" [label="Vive 5 Warehouse\nHJS-2\nA406E91A17E7\nIP TBD"];
+"Vive 6 Warehouse" [label="Vive 6 Warehouse\nHJS-2\nA406E919C4AA\n10.2.32.116"];
+"Hub 7" [label="Hub 7\nHJS-3\nMAC TBD\nIP TBD"];
+"Hub 8" [label="Hub 8\nHJS-4\nMAC TBD\nIP TBD"];
+"Hub 9" [label="Hub 9\nHJS-5\nMAC TBD\nIP TBD"];
+"TouchScreen" [label="TouchScreen\nTSW-1070R-W\nC442681A6AB5\n10.2.32.125"];
+    "Ganahl SW167F" -> "Ganahl SW167E" [label="Port 51 -> Port 52"];
+    "Ganahl SW167H" -> "Ganahl SW167G" [label="Port 51 -> Port 52"];
+    "CrestronSwitch" -> "Ganahl SW167H" [label="Port 5 -> Port 14"];
+    "WattBox" -> "CrestronSwitch" [label="1 -> Port 1"];
+    "Sub Processor" -> "CrestronSwitch" [label="1 -> Port 2"];
+    "Domotz" -> "CrestronSwitch" [label="1 -> Port 3"];
+    "Main Processor" -> "CrestronSwitch" [label="1 -> Port 4"];
+    "Vive 1 SE" -> "Ganahl SW167F" [label="1 -> Port 6"];
+    "Vive 2 SW" -> "Ganahl SW167F" [label="1 -> Port 8"];
+    "Vive 3 NW" -> "Ganahl SW167F" [label="1 -> Port 2"];
+    "Vive 4 NE" -> "Ganahl SW167F" [label="1 -> Port 4"];
+    "Vive 5 Warehouse" -> "Ganahl SW201A" [label="1 -> Port ??"];
+    "Vive 6 Warehouse" -> "Ganahl SW201A" [label="1 -> Port 21"];
+    "Hub 7" -> "Ganahl SW201A" [label="1 -> Port ??"];
+    "Hub 8" -> "Ganahl SW301C" [label="1 -> Port ??"];
+    "Hub 9" -> "Ganahl SW301C" [label="1 -> Port ??"];
+    "TouchScreen" -> "Ganahl SW167F" [label="1 -> Port 25"];
+}
