@@ -1,0 +1,320 @@
+
+    digraph NetworkDiagram {
+        //graph [splines=ortho];  // Orthogonal (90deg) lines for edges
+        node [shape=box, style="filled", fillcolor="lightgrey", fontname="Helvetica"]; // Stylish nodes
+        
+        // Increase the separation between nodes and clusters to reduce line crossings
+        nodesep=1;  // Increase node separation
+        ranksep=1;  // Increase rank separation between layers of nodes
+        
+        // Use a compound=true to allow edges to be clipped properly at cluster boundaries
+        compound=true;
+        subgraph "cluster_Main_House_MDF" {
+        label = "Main House MDF";
+        style = "filled,rounded";
+        fillcolor = "#efa8ad";
+        subgraph "cluster_Main_House_MDF_Rack_6" {
+            label = "Rack 6";
+            style = "filled,rounded";
+            fillcolor = "#a8ebef";
+            "FW01" [label="FW01\nFortinet Fortigate 100F\nMAC:?\nIP:?"];
+            "FW01" [label="FW01\nFortinet Fortigate 100F\nMAC:?\nIP:?"];
+            "FW01" [label="FW01\nFortinet Fortigate 100F\nMAC:?\nIP:?"];
+            "FW01" [label="FW01\nFortinet Fortigate 100F\nMAC:?\nIP:?"];
+            "R1" [label="R1\nUDM-Pro\nAC:8B:A9:25:22:A9\nIP:?"];
+            "R1" [label="R1\nUDM-Pro\nAC:8B:A9:25:22:A9\nIP:?"];
+            "R2" [label="R2\nSoniceWall TZ215\nMAC:?\nIP:?"];
+            "R2" [label="R2\nSoniceWall TZ215\nMAC:?\nIP:?"];
+            "R3" [label="R3\nVeloCloud EDGE5X0\nMAC:?\nIP:?"];
+            "SW01" [label="SW01\nSummit X460-48P\n02:04:96:8F:92:1F\n10.10.10.1"];
+            "SW02" [label="SW02\nSummit X460-48P\n02:04:96:8F:8F:69\nIP:?"];
+            "SW03" [label="SW03\nSummit X460-48P\n02:04:96:8F:91:7F\nIP:?"];
+            "SW04" [label="SW04\nSummit X460-48P\n02:04:96:8F:C9:6D\nIP:?"];
+            "SW05" [label="SW05\nSummit X460-48P\n02:04:96:99:BD:55\nIP:?"];
+            "SW09" [label="SW09\nNetgear GS 108\nMAC:?\nIP:?"];
+            "SW09" [label="SW09\nNetgear GS 108\nMAC:?\nIP:?"];
+            "SW08" [label="SW08\nSummit X440-8P\nMAC:?\nIP:?"];
+            "PBX2" [label="PBX2\nCisco2911\nMAC:?\nIP:?"];
+            "PBX1" [label="PBX1\nCisco2921\nMAC:?\nIP:?"];
+            "AP01" [label="AP01\nU6-LR\nAC:8B:A9:22:AA:1F\nIP:?"];
+        }
+        subgraph "cluster_Main_House_MDF_Rack_1" {
+            label = "Rack 1";
+            style = "filled,rounded";
+            fillcolor = "#efa8a9";
+            "MMS-5e" [label="MMS-5e\nMMS-5e\nD4:6A:91:62:11:BC\n10.10.50.70"];
+        }
+        subgraph "cluster_Main_House_MDF_Rack_2" {
+            label = "Rack 2";
+            style = "filled,rounded";
+            fillcolor = "#d0efa8";
+            "AV3" [label="AV3\nAV3\n00:10:7F:3D:77:7D\n10.10.50.51"];
+            "DM" [label="DM\nDM-MD16x16\n00:10:7F:43:4C:8F\n10.10.50.52"];
+            "ATV1" [label="ATV1\nATV\n90:DD:5D:DF:9A:C3\n10.10.50.153"];
+            "ATV2" [label="ATV2\nATV\n90:DD:5D:DB:B5:9A\n10.10.50.152"];
+            "DTV" [label="DTV\nDTV\nMAC:?\n10.10.20.54"];
+        }
+        subgraph "cluster_Main_House_MDF_Rack_4" {
+            label = "Rack 4";
+            style = "filled,rounded";
+            fillcolor = "#efbea8";
+            "DM-TX-201C" [label="DM-TX-201C\nDM-TX-201C\n00:10:7F:61:B4:89\n10.10.50.157"];
+            "DGE-2" [label="DGE-2\nDGE-2\n00:10:7F:2A:AF:4D\n10.10.50.158"];
+            "CP3" [label="CP3\nCP3\n00:10:7F:39:8b:BF\n10.10.40.233"];
+            "ATV3" [label="ATV3\nATV\nMAC:?\nIP:?"];
+        }
+        subgraph "cluster_Main_House_MDF_Rack_5" {
+            label = "Rack 5";
+            style = "filled,rounded";
+            fillcolor = "#a8cbef";
+            "CP3N" [label="CP3N\nCP3N\n00:10:7F:3D:1E:B3\n10.10.40.234"];
+            "DIN-AP3" [label="DIN-AP3\nDIN-AP3\n00:10:7F:B7:2D:CB\nIP:?"];
+            "I-Vu" [label="I-Vu\nI-Vu\nMAC:?\n10.10.40.20"];
+            "XT-LB1" [label="XT-LB1\nCarrier XT-LB\nMAC:?\n10.10.40.21"];
+            "XT-LB2" [label="XT-LB2\nCarrier XT-LB\nMAC:?\n10.10.40.22"];
+        }
+    }
+
+    subgraph "cluster_Command_IDF" {
+        label = "Command IDF";
+        style = "filled,rounded";
+        fillcolor = "#a8efeb";
+        subgraph "cluster_Command_IDF_Swingate" {
+            label = "Swingate";
+            style = "filled,rounded";
+            fillcolor = "#c9efa8";
+            "SW06" [label="SW06\nSummit X440-48P\n02:04:96:97:B7:07\nIP:?"];
+            "SW07" [label="SW07\nSummit X440-24P\n02:04:96:82:38:08\nIP:?"];
+            "SW07" [label="SW07\nSummit X440-24P\n02:04:96:82:38:08\nIP:?"];
+        }
+    }
+
+    subgraph "cluster_Lower_Mech" {
+        label = "Lower Mech";
+        style = "filled,rounded";
+        fillcolor = "#b0a8ef";
+        subgraph "cluster_Lower_Mech_Lower_Mech" {
+            label = "Lower Mech";
+            style = "filled,rounded";
+            fillcolor = "#efaba8";
+            "AP02" [label="AP02\nUAP-AC-M\nF4:E2:C6:23:A4:0A\nIP:?"];
+            "LPROC1" [label="LPROC1\nHQP6-2\n00:0F:E7:03:82:14\nIP:?"];
+            "LPROC2" [label="LPROC2\nHQP6-2\n00:0F:E7:03:81:F3\nIP:?"];
+            "LPROC3" [label="LPROC3\nHQP6-2\n00:0F:E7:03:83:2E\nIP:?"];
+        }
+    }
+
+    subgraph "cluster_Family_Room" {
+        label = "Family Room";
+        style = "filled,rounded";
+        fillcolor = "#c4a8ef";
+        subgraph "cluster_Family_Room_Family_Room" {
+            label = "Family Room";
+            style = "filled,rounded";
+            fillcolor = "#a8d0ef";
+            "FAM-GWAY" [label="FAM-GWAY\nCEN-RFGW-EX\n00:10:7F:40:73:1B\nIP:?"];
+        }
+    }
+
+    subgraph "cluster_His_Office" {
+        label = "His Office";
+        style = "filled,rounded";
+        fillcolor = "#e3a8ef";
+        subgraph "cluster_His_Office_His_Office" {
+            label = "His Office";
+            style = "filled,rounded";
+            fillcolor = "#daefa8";
+            "HISOFFICETS" [label="HISOFFICETS\nTSW-1050\n00:10:7F:5A:2D:19\n10.10.50.76"];
+        }
+    }
+
+    subgraph "cluster_Theater" {
+        label = "Theater";
+        style = "filled,rounded";
+        fillcolor = "#a8eeef";
+        subgraph "cluster_Theater_Theater" {
+            label = "Theater";
+            style = "filled,rounded";
+            fillcolor = "#a8efdf";
+            "THEAT-GWAY" [label="THEAT-GWAY\nCEN-ERFGW-POE\n00:10:7F:45:89:40\n10.10.50.81"];
+            "THEAT-PROJ" [label="THEAT-PROJ\nBarco Nord\nMAC:?\nIP:?"];
+        }
+    }
+
+    subgraph "cluster_Gym" {
+        label = "Gym";
+        style = "filled,rounded";
+        fillcolor = "#a8c9ef";
+        subgraph "cluster_Gym_Gym" {
+            label = "Gym";
+            style = "filled,rounded";
+            fillcolor = "#a8bfef";
+            "AP03" [label="AP03\nU6-Mesh\nAC:8B:A9:D5:2C:6D\n10.10.10.50"];
+        }
+    }
+
+    subgraph "cluster_Downstairs_Gallery" {
+        label = "Downstairs Gallery";
+        style = "filled,rounded";
+        fillcolor = "#a8dcef";
+        subgraph "cluster_Downstairs_Gallery_Downstairs_Gallery" {
+            label = "Downstairs Gallery";
+            style = "filled,rounded";
+            fillcolor = "#efa8d0";
+            "AP04" [label="AP04\nUAP-AC-M\nMAC:?\nIP:?"];
+        }
+    }
+
+    subgraph "cluster_Master_Bedroom" {
+        label = "Master Bedroom";
+        style = "filled,rounded";
+        fillcolor = "#a8d0ef";
+        subgraph "cluster_Master_Bedroom_Master_Bedroom" {
+            label = "Master Bedroom";
+            style = "filled,rounded";
+            fillcolor = "#a8ebef";
+            "AP05" [label="AP05\nUAP-IW-HD\nD0:21:F9:D0:88:A5\n10.10.10.70"];
+            "TSW-1050" [label="TSW-1050\nTSW-1050\n00:10:7f:31:d1:de\n10.10.50.71"];
+            "CEN-RFGW" [label="CEN-RFGW\nCEN-RFGW-EX\n00:10:7F:49:84:56\n10.10.50.63"];
+            "AP06" [label="AP06\nUAP-IW-HD\nF4:E2:C6:C3:FA:DE\n10.10.10.105"];
+        }
+    }
+
+    subgraph "cluster_Kids_2" {
+        label = "Kids 2";
+        style = "filled,rounded";
+        fillcolor = "#a8c4ef";
+        subgraph "cluster_Kids_2_Kids_2" {
+            label = "Kids 2";
+            style = "filled,rounded";
+            fillcolor = "#c4efa8";
+            "TSW-750-KIDS2" [label="TSW-750-KIDS2\nTSW-750\n00:10:7f:48:1e:29\n10.10.50.74"];
+            "RFGW-EX-KIDS2" [label="RFGW-EX-KIDS2\nCEN-RFGW\n00:10:7F:40:F7:AB\nIP:?"];
+        }
+    }
+
+    subgraph "cluster_Kids_1" {
+        label = "Kids 1";
+        style = "filled,rounded";
+        fillcolor = "#efa8c6";
+        subgraph "cluster_Kids_1_Kids_1" {
+            label = "Kids 1";
+            style = "filled,rounded";
+            fillcolor = "#c9efa8";
+            "TSW-750-KIDS1" [label="TSW-750-KIDS1\nTSW-750\n00:10:7F:48:AF:AC\n10.10.50.75"];
+            "RFGW-EX-KIDS1" [label="RFGW-EX-KIDS1\nCEN-RFGW-EX\n00:10:7F:40:2B:18\nnan"];
+        }
+    }
+
+    subgraph "cluster_Kids_3" {
+        label = "Kids 3";
+        style = "filled,rounded";
+        fillcolor = "#efa8b2";
+        subgraph "cluster_Kids_3_Kids_3" {
+            label = "Kids 3";
+            style = "filled,rounded";
+            fillcolor = "#d3efa8";
+            "TSW-750-KIDS3" [label="TSW-750-KIDS3\nTSW-750\n00:10:7F:2A:97:C2\n10.10.50.73"];
+            "RFGW-EX-KIDS3" [label="RFGW-EX-KIDS3\nCEN-RFGW-EX\nMAC:?\nIP:?"];
+        }
+    }
+
+    subgraph "cluster_GHLiving" {
+        label = "GHLiving";
+        style = "filled,rounded";
+        fillcolor = "#efa9a8";
+        subgraph "cluster_GHLiving_GHLiving" {
+            label = "GHLiving";
+            style = "filled,rounded";
+            fillcolor = "#a8cbef";
+            "AP07" [label="AP07\nU6-Mesh\nAC:8B:A9:DB:2C:54\n10.10.10.79"];
+        }
+    }
+
+    subgraph "cluster_GHBedroom" {
+        label = "GHBedroom";
+        style = "filled,rounded";
+        fillcolor = "#efa8c4";
+        subgraph "cluster_GHBedroom_GHBedroom" {
+            label = "GHBedroom";
+            style = "filled,rounded";
+            fillcolor = "#efbaa8";
+            "RFGW-EX-GH.Bedroom" [label="RFGW-EX-GH.Bedroom\nCEN-RFGW-EX\n00:10:7F:40:CE:F7\n10.10.50.67"];
+        }
+    }
+
+    subgraph "cluster_Game_Room" {
+        label = "Game Room";
+        style = "filled,rounded";
+        fillcolor = "#cda8ef";
+        subgraph "cluster_Game_Room_Game_Room" {
+            label = "Game Room";
+            style = "filled,rounded";
+            fillcolor = "#efa8de";
+            "AP08" [label="AP08\nU6-Mesh\nAC:8B:A9:D5:2D:0D\n10.10.10.106"];
+            "ERFGW-POE-GAME" [label="ERFGW-POE-GAME\nCEN-RFGW-EX\n00:10:7F:54:6F:87\n10.10.50.88"];
+        }
+    }
+
+    "FW01" -> "SW03" [label="Out 1 to Port 46"];
+    "FW01" -> "SW03" [label="Out 2 to Port 47"];
+    "FW01" -> "SW04" [label="Out 3 to Port 47"];
+    "R1" -> "SW05" [label="WAN to Port 47"];
+    "R1" -> "SW05" [label="Port 1 to Port 48"];
+    "R2" -> "SW09" [label="Port X1 to Port 1"];
+    "R2" -> "SW02" [label="Port X0  to Port 15"];
+    "R3" -> "SW09" [label="Port 2 to GE1"];
+    "SW01" -> "SW02" [label="STACK 1"];
+    "SW02" -> "SW01" [label="STACK 1"];
+    "SW03" -> "SW02" [label="STACK 1"];
+    "SW04" -> "SW03" [label="STACK 1"];
+    "SW05" -> "SW04" [label="STACK 1"];
+    "SW06" -> "SW01" [label="SFP 47 to SFP 49"];
+    "SW07" -> "SW02" [label="SFP 24 to SFP 49"];
+    "SW07" -> "SW06" [label="STACK 2"];
+    "SW09" -> "R2" [label="Port 1 to WAN"];
+    "SW09" -> "R3" [label="Port 2 to GE1"];
+    "SW08" -> "SW09" [label="Port 2 to Port 3"];
+    "PBX2" -> "R3" [label="GE 0/0 to Port 2"];
+    "PBX1" -> "SW04" [label="GE 0/1 to Port 48"];
+    "MMS-5e" -> "SW04" [label="Port 34 (PP6-4)"];
+    "AV3" -> "SW04" [label="Port 36 (PP6-10)"];
+    "DM" -> "SW04" [label="Port 37 (PP6-11)"];
+    "ATV1" -> "SW04" [label="Port 38 (PP6-12)"];
+    "ATV2" -> "SW05" [label="Port 31 (PP6-14)"];
+    "DTV" -> "SW04" [label="Port 43 (PP5-39)"];
+    "DM-TX-201C" -> "SW04" [label="Port 3 (PP6-19)"];
+    "DGE-2" -> "SW04" [label="Port 4 (PP6-18)"];
+    "CP3" -> "SW05" [label="Port 32 (PP6-15)"];
+    "ATV3" -> "Wi-Fi" [label="Wireless"];
+    "CP3N" -> "SW05" [label="Port 30"];
+    "DIN-AP3" -> "SW03" [label="Port 31"];
+    "I-Vu" -> "SW02" [label="Port 12"];
+    "XT-LB1" -> "SW01" [label="Port 13"];
+    "XT-LB2" -> "SW01" [label="Port 12"];
+    "AP01" -> "SW03" [label="Port 35"];
+    "AP02" -> "SW05" [label="Port 11"];
+    "LPROC1" -> "SW01" [label="Port 11"];
+    "LPROC2" -> "LPROC1" [label="Port 1 to Port 2"];
+    "LPROC3" -> "LPROC2" [label="Port 1 to Port 2"];
+    "FAM-GWAY" -> "SW04" [label="Port 33"];
+    "HISOFFICETS" -> "SW04" [label="Port 19"];
+    "THEAT-GWAY" -> "SW04" [label="Port 39"];
+    "THEAT-PROJ" -> "SW04" [label="Port 12"];
+    "AP03" -> "SW01" [label="Port 12"];
+    "AP04" -> "Wi-Fi" [label="Wireless"];
+    "AP05" -> "SW01" [label="Port 45"];
+    "TSW-1050" -> "SW04" [label="Port 26"];
+    "CEN-RFGW" -> "SW04" [label="Port 24"];
+    "AP06" -> "SW02" [label="Port 21"];
+    "TSW-750-KIDS2" -> "SW04" [label="Port 21"];
+    "RFGW-EX-KIDS2" -> "SW04" [label="Port 31"];
+    "TSW-750-KIDS1" -> "SW04" [label="Port 22"];
+    "RFGW-EX-KIDS1" -> "SW04" [label="Port 30"];
+    "TSW-750-KIDS3" -> "SW04" [label="Port 23 (PP5-25)"];
+    "RFGW-EX-KIDS3" -> "UNK" [label="UNK"];
+    "AP07" -> "SW06" [label="Port 12"];
+    "RFGW-EX-GH.Bedroom" -> "SW07" [label="Port 2"];
+    "AP08" -> "SW06" [label="Port 21"];
+    "ERFGW-POE-GAME" -> "SW07" [label="Port 3"];
+}

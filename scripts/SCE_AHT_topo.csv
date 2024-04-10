@@ -1,0 +1,63 @@
+Domotz Name,Location,Zone,Model,MAC,IP Address,Uplink,Label
+FW01,Main House MDF,Rack 6,Fortinet Fortigate 100F,MAC:?,IP:?,SW03,Out 1->Port 46
+FW01,Main House MDF,Rack 6,Fortinet Fortigate 100F,MAC:?,IP:?,SW03,Out 2->Port 47
+FW01,Main House MDF,Rack 6,Fortinet Fortigate 100F,MAC:?,IP:?,SW04,Out 3->Port 47
+FW01,Main House MDF,Rack 6,Fortinet Fortigate 100F,MAC:?,IP:?,Internet,SFP (PP4-26)
+R1,Main House MDF,Rack 6,UDM-Pro,AC:8B:A9:25:22:A9,IP:?,SW05,WAN->Port 47
+R1,Main House MDF,Rack 6,UDM-Pro,AC:8B:A9:25:22:A9,IP:?,SW05,Port 1->Port 48
+R2,Main House MDF,Rack 6,SoniceWall TZ215,MAC:?,IP:?,SW09,Port X1->Port 1
+R2,Main House MDF,Rack 6,SoniceWall TZ215,MAC:?,IP:?,SW02,Port X0 ->Port 15
+R3,Main House MDF,Rack 6,VeloCloud EDGE5X0,MAC:?,IP:?,SW09,Port 2->GE1
+SW01,Main House MDF,Rack 6,Summit X460-48P,02:04:96:8F:92:1F,10.10.10.1,SW02,STACK 1
+SW02,Main House MDF,Rack 6,Summit X460-48P,02:04:96:8F:8F:69,IP:?,SW01,STACK 1
+SW03,Main House MDF,Rack 6,Summit X460-48P,02:04:96:8F:91:7F,IP:?,SW02,STACK 1
+SW04,Main House MDF,Rack 6,Summit X460-48P,02:04:96:8F:C9:6D,IP:?,SW03,STACK 1
+SW05,Main House MDF,Rack 6,Summit X460-48P,02:04:96:99:BD:55,IP:?,SW04,STACK 1
+SW06,Command IDF,Swingate,Summit X440-48P,02:04:96:97:B7:07,IP:?,SW01,SFP 47->SFP 49
+SW07,Command IDF,Swingate,Summit X440-24P,02:04:96:82:38:08,IP:?,SW02,SFP 24->SFP 49
+SW07,Command IDF,Swingate,Summit X440-24P,02:04:96:82:38:08,IP:?,SW06,STACK 2
+SW09,Main House MDF,Rack 6,Netgear GS 108,MAC:?,IP:?,R2,Port 1->WAN
+SW09,Main House MDF,Rack 6,Netgear GS 108,MAC:?,IP:?,R3,Port 2->GE1
+SW08,Main House MDF,Rack 6,Summit X440-8P,MAC:?,IP:?,SW09,Port 2->Port 3
+PBX2,Main House MDF,Rack 6,Cisco2911,MAC:?,IP:?,R3,GE 0/0->Port 2
+PBX1,Main House MDF,Rack 6,Cisco2921,MAC:?,IP:?,SW04,GE 0/1->Port 48
+MMS-5e,Main House MDF,Rack 1,MMS-5e,D4:6A:91:62:11:BC,10.10.50.70,SW04,Port 34 (PP6-4)
+AV3,Main House MDF,Rack 2,AV3,00:10:7F:3D:77:7D,10.10.50.51,SW04,Port 36 (PP6-10)
+DM,Main House MDF,Rack 2,DM-MD16x16,00:10:7F:43:4C:8F,10.10.50.52,SW04,Port 37 (PP6-11)
+ATV1,Main House MDF,Rack 2,ATV,90:DD:5D:DF:9A:C3,10.10.50.153,SW04,Port 38 (PP6-12)
+ATV2,Main House MDF,Rack 2,ATV,90:DD:5D:DB:B5:9A,10.10.50.152,SW05,Port 31 (PP6-14)
+DTV,Main House MDF,Rack 2,DTV,MAC:?,10.10.20.54,SW04,Port 43 (PP5-39)
+DM-TX-201C,Main House MDF,Rack 4,DM-TX-201C,00:10:7F:61:B4:89,10.10.50.157,SW04,Port 3 (PP6-19)
+DGE-2,Main House MDF,Rack 4,DGE-2,00:10:7F:2A:AF:4D,10.10.50.158,SW04,Port 4 (PP6-18)
+CP3,Main House MDF,Rack 4,CP3,00:10:7F:39:8b:BF,10.10.40.233,SW05,Port 32 (PP6-15)
+ATV3,Main House MDF,Rack 4,ATV,MAC:?,IP:?,Wi-Fi,Wireless
+CP3N,Main House MDF,Rack 5,CP3N,00:10:7F:3D:1E:B3,10.10.40.234,SW05,Port 30
+DIN-AP3,Main House MDF,Rack 5,DIN-AP3,00:10:7F:B7:2D:CB,IP:?,SW03,Port 31
+I-Vu,Main House MDF,Rack 5,I-Vu,MAC:?,10.10.40.20,SW02,Port 12
+XT-LB1,Main House MDF,Rack 5,Carrier XT-LB,MAC:?,10.10.40.21,SW01,Port 13
+XT-LB2,Main House MDF,Rack 5,Carrier XT-LB,MAC:?,10.10.40.22,SW01,Port 12
+AP01,Main House MDF,Rack 6,U6-LR,AC:8B:A9:22:AA:1F,IP:?,SW03,Port 35
+AP02,Lower Mech,Lower Mech,UAP-AC-M,F4:E2:C6:23:A4:0A,IP:?,SW05,Port 11
+LPROC1,Lower Mech,Lower Mech,HQP6-2,00:0F:E7:03:82:14,IP:?,SW01,Port 11
+LPROC2,Lower Mech,Lower Mech,HQP6-2,00:0F:E7:03:81:F3,IP:?,LPROC1,Port 1->Port 2
+LPROC3,Lower Mech,Lower Mech,HQP6-2,00:0F:E7:03:83:2E,IP:?,LPROC2,Port 1->Port 2
+FAM-GWAY,Family Room,Family Room,CEN-RFGW-EX,00:10:7F:40:73:1B,IP:?,SW04,Port 33
+HISOFFICETS,His Office,His Office,TSW-1050,00:10:7F:5A:2D:19,10.10.50.76,SW04,Port 19
+THEAT-GWAY,Theater,Theater,CEN-ERFGW-POE,00:10:7F:45:89:40,10.10.50.81,SW04,Port 39
+THEAT-PROJ,Theater,Theater,Barco Nord,MAC:?,IP:?,SW04,Port 12
+AP03,Gym,Gym,U6-Mesh,AC:8B:A9:D5:2C:6D,10.10.10.50,SW01,Port 12
+AP04,Downstairs Gallery,Downstairs Gallery,UAP-AC-M,MAC:?,IP:?,Wi-Fi,Wireless
+AP05,Master Bedroom,Master Bedroom,UAP-IW-HD,D0:21:F9:D0:88:A5,10.10.10.70,SW01,Port 45
+TSW-1050,Master Bedroom,Master Bedroom,TSW-1050,00:10:7f:31:d1:de,10.10.50.71,SW04,Port 26
+CEN-RFGW,Master Bedroom,Master Bedroom,CEN-RFGW-EX,00:10:7F:49:84:56,10.10.50.63,SW04,Port 24
+AP06,Master Bedroom,Master Bedroom,UAP-IW-HD,F4:E2:C6:C3:FA:DE,10.10.10.105,SW02,Port 21
+TSW-750-KIDS2,Kids 2,Kids 2,TSW-750,00:10:7f:48:1e:29,10.10.50.74,SW04,Port 21
+RFGW-EX-KIDS2,Kids 2,Kids 2,CEN-RFGW,00:10:7F:40:F7:AB,IP:?,SW04,Port 31
+TSW-750-KIDS1,Kids 1,Kids 1,TSW-750,00:10:7F:48:AF:AC,10.10.50.75,SW04,Port 22
+RFGW-EX-KIDS1,Kids 1,Kids 1,CEN-RFGW-EX,00:10:7F:40:2B:18,,SW04,Port 30
+TSW-750-KIDS3,Kids 3,Kids 3,TSW-750,00:10:7F:2A:97:C2,10.10.50.73,SW04,Port 23 (PP5-25)
+RFGW-EX-KIDS3,Kids 3,Kids 3,CEN-RFGW-EX,MAC:?,IP:?,UNK,UNK
+AP07,GHLiving,GHLiving,U6-Mesh,AC:8B:A9:DB:2C:54,10.10.10.79,SW06,Port 12
+RFGW-EX-GH.Bedroom,GHBedroom,GHBedroom,CEN-RFGW-EX,00:10:7F:40:CE:F7,10.10.50.67,SW07,Port 2
+AP08,Game Room,Game Room,U6-Mesh,AC:8B:A9:D5:2D:0D,10.10.10.106,SW06,Port 21
+ERFGW-POE-GAME,Game Room,Game Room,CEN-RFGW-EX,00:10:7F:54:6F:87,10.10.50.88,SW07,Port 3
